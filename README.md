@@ -30,3 +30,6 @@ Muhammad Mursalin Darmamawan / [@Alin](https://line.me/t/p/~muhmursalind)
 
 ## Author Linepy
 Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)
+
+upgrade PIP
+'python -m pip install --upgrade pip'

@@ -242,7 +242,7 @@ def restartBot():
     
 def logError(text):
     client.log("[ ERROR ] {}".format(str(text)))
-    tz = pytz.timezone("Asia/Jakarta")
+    tz = pytz.timezone("Asia/Kolkata")
     timeNow = datetime.now(tz=tz)
     timeHours = datetime.strftime(timeNow,"(%H:%M)")
     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -583,19 +583,19 @@ def clientBot(op):
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
                 client.findAndAddContactsByMid(op.param1)
-            sendMention(op.param1, "Halo @!,terimakasih telah menambahkan saya sebagai teman :3")
+            sendMention(op.param1, "Hello @ !, Thank you for adding me as a friend: 3")
 
         if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE INTO GROUP")
             if clientMid in op.param3:
                 if settings["autoJoin"] == True:
                     client.acceptGroupInvitation(op.param1)
-                sendMention(op.param1, "Halo @!, Terimakasih Telah Mengundang Saya :3")
+                sendMention(op.param1, "Hello @ !, Thank you for inviting me: 3")
 
         if op.type in [22, 24]:
             print ("[ 22 And 24 ] NOTIFIED INVITE INTO ROOM & NOTIFIED LEAVE ROOM")
             if settings["autoLeave"] == True:
-                sendMention(op.param1, "Oi asw @!,ngapain invite saya")
+                sendMention(op.param1, "Oi asw @!, Why do you invite me?")
                 client.leaveRoom(op.param1)
 
         if op.type == 25:
@@ -637,7 +637,7 @@ def clientBot(op):
                                 sep = text.split(" ")
                                 key = text.replace(sep[0] + " ","")
                                 if " " in key:
-                                    client.sendMessage(to, "Key tidak bisa menggunakan spasi")
+                                    client.sendMessage(to, "Key cannot use spaces")
                                 else:
                                     settings["keyCommand"] = str(key).lower()
                                     client.sendMessage(to, "Berhasil mengubah key command menjadi [ {} ]".format(str(key).lower()))
@@ -1013,18 +1013,18 @@ def clientBot(op):
                                     client.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
                                     client.sendMessage(to, "Total {} Mention".format(str(len(nama))))  
                             elif cmd == "lurking on":
-                                tz = pytz.timezone("Asia/Makassar")
+                                tz = pytz.timezone("Asia/Kolkata")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
-                                hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                                bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                                hari = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"] 
+                                bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                                 hr = timeNow.strftime("%A")
                                 bln = timeNow.strftime("%m")
                                 for i in range(len(day)):
                                     if hr == day[i]: hasil = hari[i]
                                 for k in range(0, len(bulan)):
                                     if bln == str(k): bln = bulan[k-1]
-                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : [ " + timeNow.strftime('%H:%M:%S') + " ]"
+                                readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nHour : [ " + timeNow.strftime('%H:%M:%S') + " ]"
                                 if receiver in read['readPoint']:
                                     try:
                                         del read['readPoint'][receiver]
@@ -1036,7 +1036,7 @@ def clientBot(op):
                                     read['readMember'][receiver] = ""
                                     read['readTime'][receiver] = readTime
                                     read['ROM'][receiver] = {}
-                                    client.sendMessage(receiver,"Lurking telah diaktifkan")
+                                    client.sendMessage(receiver,"Lurking has been activated")
                                 else:
                                     try:
                                         del read['readPoint'][receiver]
@@ -1050,11 +1050,11 @@ def clientBot(op):
                                     read['ROM'][receiver] = {}
                                     client.sendMessage(receiver,"Set reading point : \n" + readTime)
                             elif cmd == "lurking off":
-                                tz = pytz.timezone("Asia/Makassar")
+                                tz = pytz.timezone("Asia/Kolkata")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
-                                hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                                bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                                hari = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"] 
+                                bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                                 hr = timeNow.strftime("%A")
                                 bln = timeNow.strftime("%m")
                                 for i in range(len(day)):
@@ -1074,11 +1074,11 @@ def clientBot(op):
                                     client.sendMessage(receiver,"Delete reading point : \n" + readTime)
         
                             elif cmd == "lurking reset":
-                                tz = pytz.timezone("Asia/Makassar")
+                                tz = pytz.timezone("Asia/Kolkata")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
-                                hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                                bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                                hari = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"] 
+                                bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                                 hr = timeNow.strftime("%A")
                                 bln = timeNow.strftime("%m")
                                 for i in range(len(day)):
@@ -1103,11 +1103,11 @@ def clientBot(op):
                                     client.sendMessage(msg.to, "Lurking belum diaktifkan ngapain di reset?")
                                     
                             elif cmd == "lurking":
-                                tz = pytz.timezone("Asia/Makassar")
+                                tz = pytz.timezone("Asia/Kolkata")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
-                                hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                                bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                                hari = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"] 
+                                bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                                 hr = timeNow.strftime("%A")
                                 bln = timeNow.strftime("%m")
                                 for i in range(len(day)):
@@ -1226,7 +1226,7 @@ def clientBot(op):
                                 r = requests.get("http://api.corrykalam.net/apisholat.php?lokasi={}".format(location))
                                 data = r.text
                                 data = json.loads(data)
-                                tz = pytz.timezone("Asia/Makassar")
+                                tz = pytz.timezone("Asia/Kolkata")
                                 timeNow = datetime.now(tz=tz)
                                 if data[1] != "Subuh : " and data[2] != "Dzuhur : " and data[3] != "Ashar : " and data[4] != "Maghrib : " and data[5] != "Isya : ":
                                     ret_ = "╔══[ Jadwal Sholat Sekitar " + data[0] + " ]"
@@ -1246,18 +1246,18 @@ def clientBot(op):
                                     r = requests.get("http://api.corrykalam.net/apicuaca.php?kota={}".format(location))
                                     data = r.text
                                     data = json.loads(data)
-                                    tz = pytz.timezone("Asia/Makassar")
+                                    tz = pytz.timezone("Asia/Kolkata")
                                     timeNow = datetime.now(tz=tz)
                                     if "result" not in data:
                                         ret_ = "╔══[ Weather Status ]"
-                                        ret_ += "\n╠ Location : " + data[0].replace("Temperatur di kota ","")
-                                        ret_ += "\n╠ Suhu : " + data[1].replace("Suhu : ","") + "°C"
-                                        ret_ += "\n╠ Kelembaban : " + data[2].replace("Kelembaban : ","") + "%"
-                                        ret_ += "\n╠ Tekanan udara : " + data[3].replace("Tekanan udara : ","") + "HPa"
-                                        ret_ += "\n╠ Kecepatan angin : " + data[4].replace("Kecepatan angin : ","") + "m/s"
+                                        ret_ += "\n╠ Location : " + data[0].replace("Temperature in the city","")
+                                        ret_ += "\n╠ Temperature : " + data[1].replace("Temperature : ","") + "°C"
+                                        ret_ += "\n╠ Humidity : " + data[2].replace("Humidity : ","") + "%"
+                                        ret_ += "\n╠ Air pressure : " + data[3].replace("Air pressure : ","") + "HPa"
+                                        ret_ += "\n╠ Wind velocity : " + data[4].replace("Wind velocity : ","") + "m/s"
                                         ret_ += "\n╠══[ Time Status ]"
-                                        ret_ += "\n╠ Tanggal : " + datetime.strftime(timeNow,'%Y-%m-%d')
-                                        ret_ += "\n╠ Jam : " + datetime.strftime(timeNow,'%H:%M:%S') + " WIB"
+                                        ret_ += "\n╠ Date : " + datetime.strftime(timeNow,'%Y-%m-%d')
+                                        ret_ += "\n╠ Hour : " + datetime.strftime(timeNow,'%H:%M:%S') + " WIB"
                                         ret_ += "\n╚══[ Success ]"
                                         client.sendMessage(to, str(ret_))
                                 except Exception as error:
@@ -1290,16 +1290,16 @@ def clientBot(op):
                                         ret_ += "\n╠ Nama : {}".format(str(data["graphql"]["user"]["full_name"]))
                                         ret_ += "\n╠ Username : {}".format(str(data["graphql"]["user"]["username"]))
                                         ret_ += "\n╠ Bio : {}".format(str(data["graphql"]["user"]["biography"]))
-                                        ret_ += "\n╠ Pengikut : {}".format(str(data["graphql"]["user"]["edge_followed_by"]["count"]))
-                                        ret_ += "\n╠ Diikuti : {}".format(str(data["graphql"]["user"]["edge_follow"]["count"]))
+                                        ret_ += "\n╠ Follower : {}".format(str(data["graphql"]["user"]["edge_followed_by"]["count"]))
+                                        ret_ += "\n╠ Followed : {}".format(str(data["graphql"]["user"]["edge_follow"]["count"]))
                                         if data["graphql"]["user"]["is_verified"] == True:
-                                            ret_ += "\n╠ Verifikasi : Sudah"
+                                            ret_ += "\n╠ Verification: Yes"
                                         else:
-                                            ret_ += "\n╠ Verifikasi : Belum"
+                                            ret_ += "\n╠ Verification: Not yet"
                                         if data["graphql"]["user"]["is_private"] == True:
-                                            ret_ += "\n╠ Akun Pribadi : Iya"
+                                            ret_ += "\n╠ Personal Account: Yes"
                                         else:
-                                            ret_ += "\n╠ Akun Pribadi : Tidak"
+                                            ret_ += "\n╠ Personal Account: No."
                                         ret_ += "\n╠ Total Post : {}".format(str(data["graphql"]["user"]["edge_owner_to_timeline_media"]["count"]))
                                         ret_ += "\n╚══[ https://www.instagram.com/{} ]".format(search)
                                         path = data["graphql"]["user"]["profile_pic_url_hd"]
@@ -1391,7 +1391,7 @@ def clientBot(op):
                                         num += 1
                                         ret_ += "\n╠ {}. {}".format(str(num), str(music["single"]))
                                     ret_ += "\n╚══[ Total {} Music ]".format(str(len(data["result"])))
-                                    ret_ += "\n\nUntuk Melihat Details Music, silahkan gunakan command {}SearchMusic {}|「number」".format(str(setKey), str(search))
+                                    ret_ += "\n\nTo view music details, please use the command {}SearchMusic {}|「number」".format(str(setKey), str(search))
                                     client.sendMessage(to, str(ret_))
                                 elif len(cond) == 2:
                                     num = int(cond[1])
@@ -1518,7 +1518,7 @@ def clientBot(op):
                                 except:
                                     pass
                                 ret_ = "╔══[ Details Contact ]"
-                                ret_ += "\n╠ Nama : {}".format(str(contact.displayName))
+                                ret_ += "\n╠ Name : {}".format(str(contact.displayName))
                                 ret_ += "\n╠ MID : {}".format(str(msg.contentMetadata["mid"]))
                                 ret_ += "\n╠ Bio : {}".format(str(contact.statusMessage))
                                 ret_ += "\n╠ Gambar Profile : http://dl.profile.line-cdn.net/{}".format(str(contact.pictureStatus))

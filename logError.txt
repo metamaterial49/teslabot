@@ -1,0 +1,20 @@
+
+[ Rabu, 20 - 06 - 2018 | 17:57:47 ] Invalid mids
+[ Rabu, 20 - 06 - 2018 | 17:58:20 ] TalkException(code=82, reason='can not send using plain mode', parameterMap=None)
+[ Rabu, 01 - 08 - 2018 | 22:21:05 ] Invalid mids
+[ Rabu, 01 - 08 - 2018 | 22:46:31 ] TalkException(code=0, reason='invalid mention.', parameterMap=None)
+[ Rabu, 01 - 08 - 2018 | 22:48:10 ] TalkException(code=0, reason='picture cannot be changed by user directly', parameterMap=None)
+[ Rabu, 01 - 08 - 2018 | 22:58:55 ] Invalid mids
+[ Rabu, 01 - 08 - 2018 | 23:05:31 ] 'data'
+[ Rabu, 01 - 08 - 2018 | 23:05:45 ] 'data'
+[ Rabu, 01 - 08 - 2018 | 23:06:52 ] Invalid mids
+[ Minggu, 26 - 04 - 2020 | 04:04:08 ] [Errno 11001] getaddrinfo failed
+[ Minggu, 26 - 04 - 2020 | 04:04:10 ] [Errno 11001] getaddrinfo failed
+[ Minggu, 26 - 04 - 2020 | 12:47:26 ] HTTPConnectionPool(host='api.corrykalam.net', port=80): Max retries exceeded with url: /apicuaca.php?kota=Delhi (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x04044610>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[ Minggu, 26 - 04 - 2020 | 12:49:27 ] encoding without a string argument
+[ Minggu, 26 - 04 - 2020 | 12:51:07 ] 
+[ Minggu, 26 - 04 - 2020 | 12:52:02 ] 
+[ Minggu, 26 - 04 - 2020 | 12:52:23 ] 
+[ Minggu, 26 - 04 - 2020 | 12:53:01 ] 
+[ Minggu, 26 - 04 - 2020 | 12:53:18 ] 
+[ Minggu, 26 - 04 - 2020 | 12:53:32 ] 
