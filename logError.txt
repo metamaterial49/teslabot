@@ -18,3 +18,7 @@
 [ Minggu, 26 - 04 - 2020 | 12:53:01 ] 
 [ Minggu, 26 - 04 - 2020 | 12:53:18 ] 
 [ Minggu, 26 - 04 - 2020 | 12:53:32 ] 
+[ Minggu, 26 - 04 - 2020 | 22:36:28 ] 'data'
+[ Minggu, 26 - 04 - 2020 | 22:39:29 ] TalkException(code=0, reason='picture cannot be changed by user directly', parameterMap=None)
+[ Senin, 27 - 04 - 2020 | 00:21:13 ] 'MENTION'
+[ Senin, 27 - 04 - 2020 | 00:45:02 ] encoding without a string argument
